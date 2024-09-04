@@ -5,8 +5,8 @@ def personal_sum(numbers):
         try:
             result += number
         except TypeError:
+            incorrect_data += 1
             print(f'Некорректный тип данных для подсчета суммы - {number}')
-        incorrect_data += 1
     return result, incorrect_data
 
 
@@ -25,4 +25,4 @@ print(f'Результат 2: {calculate_average([1, "Строка", 3, "Ещё 
 print(f'Результат 3: {calculate_average(567)}')  # Передана не коллекция
 print(f'Результат 4: {calculate_average([42, 15, 36, 13])}')  # Всё должно работать
 
-# ПОДСКАЖИТЕ ПОЖАЙЛУСТА ОШИБКУ, в 16 строчке кода   происходит деление на 0 и функция except выдает ноль, а должна выдавать 26.5 не пойму куда смотреть.Получается не срабатывает исключение?
+
